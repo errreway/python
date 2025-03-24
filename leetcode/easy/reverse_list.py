@@ -32,7 +32,7 @@ class LinkedList(object):
         # 为了保持链表 head 不被破坏
         temp_head = self.head
         while temp_head:
-            print(temp_head.val)
+            prin(temp_head.val)
             temp_head = temp_head.next
 
 
@@ -59,11 +59,7 @@ class Solution(object):
         :rtype: ListNode
         """
         if (not head) or (not head.next):
-            return head
-        node = self.reverse_list_recursion(head.next)
-        head.next.next = head
-        head.next = None
-        return node
+    
 
 
 if __name__ == '__main__':
