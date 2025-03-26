@@ -28,11 +28,6 @@ def main(argv):
     if host == '':
         usage()
         sys.exit(2)
-    else:
-        for i in range(visitTimesPerPage):
-            for url in urls:
-                visitPageThread = VisitPageThread(url + str(i), host, url)
-                visitPageThread.start()
 
 
 class VisitPageThread(threading.Thread):
@@ -47,11 +42,7 @@ class VisitPageThread(threading.Thread):
         req = urllib.request.Request(url)
         req.set_proxy('companyname.com:911', 'http')
         # you may set you proxy here.
-        try:
-            doc = urllib.request.urlopen(req).read()
-            print(doc)
-        except Exception as e:
-            print("urlopen Exception : %s" % e)
+   
 
 if __name__ == '__main__':
     sys.argv.append('http://smilejay.com/')
