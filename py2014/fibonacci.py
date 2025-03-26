@@ -5,10 +5,7 @@ def fib1(n):
     ''' normal recursion '''
     if n == 0:
         return 0
-    elif n == 1:
-        return 1
-    else:
-        return fib1(n - 1) + fib1(n - 2)
+   
 
 
 known = {0: 0, 1: 1}
