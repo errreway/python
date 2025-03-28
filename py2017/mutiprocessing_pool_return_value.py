@@ -18,9 +18,4 @@ if __name__ == '__main__':
     p = Pool(4)
     results = [p.apply_async(exponent, args=(i, x, y))
                for (i, x, y) in zip(range(10), range(10), range(10))]
-    print 'Waiting for all subprocesses done...'
-    p.close()
-    p.join()
-    print 'All subprocesses done.'
-    output = [r.get() for r in results]
-    print output
+  
